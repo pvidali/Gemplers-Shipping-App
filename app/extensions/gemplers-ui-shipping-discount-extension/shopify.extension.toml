@@ -1,0 +1,14 @@
+api_version = "2025-10"
+[[extensions]]
+# Change the merchant-facing name of the extension in locales/en.default.json
+name = "t:name"
+description = "t:description"
+handle = "gemplers-ui-shipping-discount-extension"
+type = "ui_extension"
+uid = "2b3775bf-eb52-7071-adb9-5102ab83159c8da2e45a"
+
+# Only 1 target can be specified for each Admin block extension
+[[extensions.targeting]]
+module = "./src/DiscountFunctionSettings.jsx"
+# The target used here must match the target used in the module file (./src/DiscountFunctionSettings.jsx)
+target = "admin.discount-details.function-settings.render"

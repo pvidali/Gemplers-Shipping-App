@@ -1,0 +1,21 @@
+api_version = "2025-04"
+
+[[extensions]]
+name = "t:name"
+handle = "gemplers-shipping-discount-extension"
+type = "function"
+uid = "da420d7d-a664-b08f-1504-469fdb5cc020f03a6115"
+description = "t:description"
+
+
+  [[extensions.targeting]]
+  target = "cart.delivery-options.discounts.generate.run"
+  input_query = "src/cart_delivery_options_discounts_generate_run.graphql"
+  export = "cart-delivery-options-discounts-generate-run"
+
+  [extensions.build]
+  command = ""
+  path = "dist/function.wasm"
+
+[extensions.ui]
+handle = "gemplers-ui-shipping-discount-extension"

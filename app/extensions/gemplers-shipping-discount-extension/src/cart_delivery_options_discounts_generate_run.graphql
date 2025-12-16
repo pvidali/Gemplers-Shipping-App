@@ -1,0 +1,35 @@
+query RunInput {
+  cart {
+    cost {
+      subtotalAmount {
+        amount
+      }
+    }
+    lines {
+      id
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          product {
+            hasAnyTag(tags: "NOFREESHIP")
+          }
+        }
+      }
+    }
+    deliveryGroups {
+      id
+      deliveryAddress {
+        provinceCode
+      }
+      deliveryOptions {
+        handle
+        title
+      }
+    }
+  }
+  discount {
+    metafield(namespace: "$app:gemplers-shipping-discount", key: "function-configuration") {
+      value
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Gemplers Shipping Discount",
+  "description": "Configure free shipping discount settings",
+  "title": "Free Shipping Discount Configuration",
+  "loading": "Loading...",
+  "minimumSubtotal": "Minimum Cart Subtotal",
+  "discountPercentage": "Shipping Discount Percentage",
+  "excludedStates": "Excluded States",
+  "validShippingRates": "Valid Shipping Rate Titles"
+}
